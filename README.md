@@ -8,13 +8,17 @@
 - Crear una cuenta en Docker Hub y subir la imagen al Docker Registry.
 - Instalar un cluster de kubernetes. Se recomienda alguno de los siguientes:
   - [kind](https://kind.sigs.k8s.io/)
+  - [k3s](https://k3s.io/)
   - [minikube](https://minikube.sigs.k8s.io/docs/start/)
   - [GKE](https://cloud.google.com/kubernetes-engine/docs/quickstart)
   - [DigitalOcean Managed Kubernetes](https://www.digitalocean.com/products/kubernetes)
 - Cargar las credenciales de Docker Hub en el cluster de Kubernetes en el namespace default.
 - Desplegar un deployment con la imagen generada en los pasos anteriores.
 - Desplegar un service al puerto 80/tcp del deployment anterior.
-- Instalar [NGINX ingress](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start)
+- Instalar un Ingress Controller en el cluster de Kubernetes, puede ser alguno de los siguientes:
+  - [NGINX ingress](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start)
+  - [GKE Ingress](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress)
+  - [Traefik](https://doc.traefik.io/traefik/providers/kubernetes-ingress/)
 - Generar un ingress para mostrar el service
 - Tomar capturas de pantalla
 
